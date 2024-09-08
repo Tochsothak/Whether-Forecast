@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Whether Forecast</title>
+
+    <link rel="stylesheet" href=".//Styles/style.css" />
+    <link rel="stylesheet" href="./Styles/fiveday.css" />
+    <!--link icon from fontAwesome-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!--fonts-family-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!--first-section-->
+    <section class="first-section">
+      <!--search info-->
+      <div class="weather">
+        <div class="weather-search">
+          <h1>MY WEATHER &deg;</h1>
+          <form class="search-bar">
+            <input type="text" id="cityInput" placeholder="Search" />
+            <button type="submit">
+              <i class="fas fa-search"></i>
+            </button>
+          </form>
+        </div>
+        <!--navbar-->
+      </div>
+      <div class="weather-container">
+        <!--Weather info-->
+        <div class="weather-info">
+          <div class="current-weather">
+            <h3 id="current-weather">CURRENT WHETHER</h3>
+            <h3 id="date">30.06.2018</h3>
+          </div>
+
+          <div class="weather-logo">
+            <div class="weather-icon">
+              <img id="weather-icon" alt="Weather-Icon" />
+              <h3 id="description">description</h3>
+            </div>
+
+            <!--Temp info-->
+            <div class="temperature">
+              <h1 id="temp">&deg;C</h1>
+              <p id="real-feel">Real feel &deg;</p>
+            </div>
+            <!--Sunrize and Sunset-->
+            <div class="weather-hours">
+              <div class="hours">
+                <p>Sunrise :</p>
+                <p id="sunrise"></p>
+              </div>
+              <div class="hours">
+                <p>Sunset :</p>
+                <p id="sunset"></p>
+              </div>
+              <div class="hours">
+                <p>duration :</p>
+                <p id="duration"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--End of weather info-->
+        <!--hourly--->
+        <div class="hourly">
+          <h3>HOURLY</h3>
+
+          <div id="hourly-forecast">
+            <div>
+              <p>Temp</p>
+              <p>Real feel</p>
+              <p>Winds</p>
+            </div>
+            <div class="hourly-item">
+              <span>hour</span>
+              <img src="${iconUrl}" alt="Hourly Weather Icon" />
+              <span>temperature</span>
+            </div>
+          </div>
+        </div>
+
+        <!--Five day-->
+        <div class="fiveDay-container">
+          <h3>FIVE DAYS</h3>
+          <div id="fiveDay">
+            <div id="fiveDay-Item">
+              <p><strong>${date}</strong></p>
+              <p>${temp}°C</p>
+              <p>${description}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="./script.js"></script>
+    <!-- <script src="./script2.js"></script> -->
+  </body>
+</html>
